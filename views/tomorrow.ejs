@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weather Result</title>
+<link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body class="container">
+<div class="tomorrowForm">
+    <h1>Weather for <%= location %></h1>
+    <p>Latitude: <%= latitude %></p>
+    <p>Longitude: <%= longitude %></p>
+    <p>Main Weather: <%= weatherMain %></p>
+    <p>Weather Description: <%= weatherDescription %></p>
+    <p>Humidity: <%= humidity %>%</p>
+    <p><%= humidityMessage %></p>
+</div>
+<div class="rainTime">
+    <p>Rain times tomorrow:</p>
+    <% if (rainTimes.length > 0) { %>
+    <ul>
+        <% rainTimes.forEach(time => { %>
+        <li><%= time %></li>
+        <% }) %>
+    </ul>
+    <% } else { %>
+    <p>No rain expected tomorrow.</p>
+    <% } %>
+</div>
+<div class="link">
+<a class="btn btn-primary" href="/">Check another location</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weather Result</title>
+<link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body>
+<div class="resultContainer">
+    <h1>Weather for <%= location %></h1>
+    <p>Latitude: <%= latitude %></p>
+    <p>Longitude: <%= longitude %></p>
+    <p>Main Weather: <%= weatherMain %></p>
+    <p>Weather Description: <%= weatherDescription %></p>
+    <p>Humidity: <%= humidity %></p>
+    <p><%= humidityMessage %></p>
+    <p>Country: <%= country %></p>
+>> <a href="/">Check another location</a> <<
+</div>
+</body>
+</html>

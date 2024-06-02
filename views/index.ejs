@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="assets/fff.mp4" type="video/mp4" />
+    </video>
+    <div class="formContainer">
+      <h2>Check Current Weather Forcast</h2>
+      <form action="/city" method="post">
+        <label for="city">Enter City/State:</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          placeholder="New York"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+
+      <hr>
+
+      <h2>Check Tomorrow Weather Forcast</h2>
+      <form action="/tomorrow" method="post">
+        <label for="tomorrow">Enter City/State:</label>
+        <input
+          type="text"
+          id="tomorrow"
+          name="tomorrow"
+          placeholder="London"
+          required
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
